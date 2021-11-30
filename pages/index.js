@@ -1,4 +1,6 @@
+import { Button, Center } from "@chakra-ui/react";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,7 +11,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>Goto /Lead</main>
+      <main>
+        <Center minH={"100vh"}>
+          <Link href={"/new-lead"} passHref>
+            <Button colorScheme={"teal"}>Create new lead</Button>
+          </Link>
+        </Center>
+      </main>
     </div>
   );
 }
